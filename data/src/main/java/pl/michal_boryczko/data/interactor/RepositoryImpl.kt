@@ -1,7 +1,7 @@
 package pl.michal_boryczko.data.interactor
 
 import android.content.Context
-import pl.dentaltree.data.network.NetworkService
+import pl.michal_boryczko.data.network.NetworkService
 import pl.michal_boryczko.data.preferences.UserPreferences
 import pl.michal_boryczko.domain.repository.Repository
 import javax.inject.Inject

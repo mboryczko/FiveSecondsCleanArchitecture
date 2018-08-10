@@ -1,8 +1,8 @@
 package pl.michal_boryczko.fiveseconds.internal.di.components
 
 import dagger.Component
-import pl.altconnect.mobileshop.presentation.internal.di.modules.FragmentModule
-import pl.altconnect.mobileshop.presentation.internal.di.scopes.FragmentScope
+import pl.michal_boryczko.fiveseconds.internal.di.modules.FragmentModule
+import pl.michal_boryczko.fiveseconds.internal.di.scopes.FragmentScope
 
 
 @FragmentScope

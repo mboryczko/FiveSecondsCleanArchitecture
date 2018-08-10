@@ -4,10 +4,10 @@ import dagger.Component
 import pl.altconnect.mobileshop.presentation.base.BaseActivity
 import pl.altconnect.mobileshop.presentation.base.BaseFragment
 import pl.altconnect.mobileshop.presentation.internal.di.modules.ExecutorModule
-import pl.altconnect.mobileshop.presentation.internal.di.modules.NetModule
 import pl.michal_boryczko.fiveseconds.internal.AndroidApplication
 import pl.michal_boryczko.fiveseconds.internal.di.modules.ApplicationModule
 import pl.michal_boryczko.fiveseconds.internal.di.modules.InteractorModule
+import pl.michal_boryczko.fiveseconds.internal.di.modules.NetModule
 import javax.inject.Singleton
 
 /**

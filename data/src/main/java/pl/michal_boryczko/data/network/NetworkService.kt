@@ -1,4 +1,4 @@
-package pl.dentaltree.data.network
+package pl.michal_boryczko.data.network
 
 import io.reactivex.Single
 import retrofit2.Response

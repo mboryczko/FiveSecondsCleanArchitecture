@@ -7,7 +7,7 @@ import dagger.Provides
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import pl.dentaltree.data.network.NetworkService
+import pl.michal_boryczko.data.network.NetworkService
 import pl.michal_boryczko.fiveseconds.BuildConfig
 import java.util.concurrent.TimeUnit
 import javax.inject.Named

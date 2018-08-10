@@ -1,4 +1,4 @@
-package pl.dentaltree.data.executor
+package pl.michal_boryczko.data.executor
 
 import pl.michal_boryczko.domain.executor.ThreadExecutor
 import java.util.concurrent.BlockingQueue
