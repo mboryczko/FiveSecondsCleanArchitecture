@@ -1,0 +1,15 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation domainDependencies.kotlinStdLib
+
+    implementation domainDependencies.gson
+    implementation domainDependencies.dagger
+    implementation domainDependencies.rxJava
+    implementation domainDependencies.json
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
