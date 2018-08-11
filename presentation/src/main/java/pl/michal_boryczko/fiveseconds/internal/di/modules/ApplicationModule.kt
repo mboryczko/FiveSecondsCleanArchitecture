@@ -2,10 +2,9 @@ package pl.michal_boryczko.fiveseconds.internal.di.modules
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
-import pl.dentaltree.data.executor.JobExecutor
+import pl.michal_boryczko.data.executor.JobExecutor
 import pl.michal_boryczko.domain.executor.PostExecutionThread
 import pl.michal_boryczko.domain.executor.ThreadExecutor
 import pl.michal_boryczko.fiveseconds.UiThread

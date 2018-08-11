@@ -9,6 +9,9 @@ import javax.inject.Inject
 /**
  * Created by ${michal_boryczko} on 10.08.2018.
  */
-class RepositoryImpl @Inject constructor(val service: NetworkService, val context: Context, val preferences: UserPreferences) : Repository {
+class RepositoryImpl @Inject constructor(
+        val service: NetworkService,
+        val context: Context,
+        val preferences: UserPreferences) : Repository {
 
 }

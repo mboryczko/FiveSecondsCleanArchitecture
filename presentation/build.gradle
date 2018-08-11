@@ -1,8 +1,7 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     def globalConfiguration = rootProject.extensions.getByName("ext")
@@ -17,7 +16,8 @@ android {
         multiDexEnabled true
         versionName "1.0"
 
-        buildConfigField 'String', 'API_ENDPOINT', '"michal-boryczko.pl"'
+        buildConfigField 'String', 'API_ENDPOINT', '"http://www.michal-boryczko.pl"'
+
     }
     buildTypes {
         release {
@@ -40,10 +40,11 @@ dependencies {
     implementation presentationDependencies.appcompat
     implementation presentationDependencies.rxJava
     implementation presentationDependencies.rxAndroid
-    implementation presentationDependencies.daggerCompiler
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    kapt presentationDependencies.daggerCompiler
     implementation presentationDependencies.dagger
     implementation presentationDependencies.butterKnife
-    implementation presentationDependencies.butterKnifeAnnotationProcessor
+    kapt presentationDependencies.butterKnifeAnnotationProcessor
     implementation presentationDependencies.constraintLayout
     implementation presentationDependencies.stetho
     implementation presentationDependencies.timber
@@ -56,4 +57,8 @@ dependencies {
     androidTestImplementation presentationDependencies.testRunner
     androidTestImplementation presentationDependencies.espresso
     testImplementation 'junit:junit:4.12'
+}
+
+kapt {
+    generateStubs = true
 }

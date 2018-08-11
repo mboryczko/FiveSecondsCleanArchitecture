@@ -1,11 +1,12 @@
 package pl.michal_boryczko.fiveseconds.internal.di.components
 
 import dagger.Component
-import pl.altconnect.mobileshop.presentation.base.BaseActivity
-import pl.altconnect.mobileshop.presentation.base.BaseFragment
-import pl.altconnect.mobileshop.presentation.internal.di.modules.ExecutorModule
+import pl.michal_boryczko.domain.repository.Repository
+import pl.michal_boryczko.fiveseconds.base.BaseActivity
+import pl.michal_boryczko.fiveseconds.base.BaseFragment
 import pl.michal_boryczko.fiveseconds.internal.AndroidApplication
 import pl.michal_boryczko.fiveseconds.internal.di.modules.ApplicationModule
+import pl.michal_boryczko.fiveseconds.internal.di.modules.ExecutorModule
 import pl.michal_boryczko.fiveseconds.internal.di.modules.InteractorModule
 import pl.michal_boryczko.fiveseconds.internal.di.modules.NetModule
 import javax.inject.Singleton
@@ -21,6 +22,8 @@ interface ApplicationComponent {
   fun inject(baseActivity: BaseActivity)
   fun inject(baseFragment: BaseFragment)
   fun inject(androidApplication: AndroidApplication)
+
+  fun getRepository(): Repository
 
 }
 

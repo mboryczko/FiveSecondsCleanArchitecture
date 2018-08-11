@@ -5,7 +5,9 @@ import android.support.multidex.MultiDexApplication
 import com.facebook.stetho.Stetho
 import pl.michal_boryczko.fiveseconds.BuildConfig
 import pl.michal_boryczko.fiveseconds.internal.di.components.ApplicationComponent
+import pl.michal_boryczko.fiveseconds.internal.di.components.DaggerApplicationComponent
 import pl.michal_boryczko.fiveseconds.internal.di.modules.ApplicationModule
+import pl.michal_boryczko.fiveseconds.internal.di.modules.NetModule
 import timber.log.Timber
 
 /**
@@ -40,11 +42,11 @@ class AndroidApplication : MultiDexApplication() {
 	private fun initializeTimber() = Timber.plant(Timber.DebugTree())
 
 	private fun initializeInjector() {
-		/*applicationComponent = DaggerApplicationComponent.builder()
+		applicationComponent = DaggerApplicationComponent.builder()
 				.applicationModule(ApplicationModule(this))
 				.netModule(NetModule(this))
 				.build()
-		applicationComponent.inject(this)*/
+		applicationComponent.inject(this)
 	}
 
 	/*private fun initializeErrorHandler() = RxJavaPlugins.setErrorHandler { Functions.emptyConsumer<ApiErrorException>() }*/

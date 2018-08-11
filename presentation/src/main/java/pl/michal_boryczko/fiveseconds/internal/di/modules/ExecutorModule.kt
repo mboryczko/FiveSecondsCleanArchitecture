@@ -1,4 +1,4 @@
-package pl.altconnect.mobileshop.presentation.internal.di.modules
+package pl.michal_boryczko.fiveseconds.internal.di.modules
 
 import dagger.Module
 import dagger.Provides

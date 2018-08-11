@@ -1,8 +1,9 @@
-package pl.altconnect.mobileshop.presentation.base
+package pl.michal_boryczko.fiveseconds.base
 
 
 import android.content.Context
 import android.content.pm.ActivityInfo
+import android.support.multidex.MultiDexApplication
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
@@ -12,6 +13,7 @@ import pl.michal_boryczko.fiveseconds.R
 import pl.michal_boryczko.fiveseconds.internal.AndroidApplication
 import pl.michal_boryczko.fiveseconds.internal.di.components.ActivityComponent
 import pl.michal_boryczko.fiveseconds.internal.di.components.ApplicationComponent
+import pl.michal_boryczko.fiveseconds.internal.di.components.DaggerActivityComponent
 import pl.michal_boryczko.fiveseconds.internal.di.modules.ActivityModule
 import javax.inject.Inject
 
@@ -22,7 +24,7 @@ abstract class BaseActivity : AppCompatActivity() {
 
 
   @Inject
-  lateinit var productRepository: Repository
+  lateinit var repository: Repository
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -43,10 +45,10 @@ abstract class BaseActivity : AppCompatActivity() {
   val applicationComponent: ApplicationComponent
     get() = (application as AndroidApplication).applicationComponent
 
- /* val activityComponent: ActivityComponent
+  val activityComponent: ActivityComponent
     get() = DaggerActivityComponent.builder().applicationComponent(applicationComponent)
         .activityModule(ActivityModule(this))
-        .build()*/
+        .build()
 
   fun showKeyboard(view: View){
     //not working

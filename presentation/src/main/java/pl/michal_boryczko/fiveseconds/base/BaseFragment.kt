@@ -1,4 +1,4 @@
-package pl.altconnect.mobileshop.presentation.base
+package pl.michal_boryczko.fiveseconds.base
 
 import android.content.Context
 import android.support.v4.app.Fragment

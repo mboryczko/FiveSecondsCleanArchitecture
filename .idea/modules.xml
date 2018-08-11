@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/FiveSecondsCleanArchitecture.iml" filepath="$PROJECT_DIR$/FiveSecondsCleanArchitecture.iml" />
       <module fileurl="file://C:\Users\user\Desktop\github\presentation\app.iml" filepath="C:\Users\user\Desktop\github\presentation\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/data/data.iml" filepath="$PROJECT_DIR$/data/data.iml" />
       <module fileurl="file://$PROJECT_DIR$/domain/domain.iml" filepath="$PROJECT_DIR$/domain/domain.iml" />
-      <module fileurl="file://$PROJECT_DIR$/github.iml" filepath="$PROJECT_DIR$/github.iml" />
+      <module fileurl="file://C:\Users\mjbor\AndroidStudioProjects\FiveSecondsCleanArchitecture\github.iml" filepath="C:\Users\mjbor\AndroidStudioProjects\FiveSecondsCleanArchitecture\github.iml" />
       <module fileurl="file://$PROJECT_DIR$/presentation/presentation.iml" filepath="$PROJECT_DIR$/presentation/presentation.iml" />
     </modules>
   </component>
