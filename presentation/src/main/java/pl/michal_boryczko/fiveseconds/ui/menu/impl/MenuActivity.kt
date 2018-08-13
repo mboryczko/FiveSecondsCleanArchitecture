@@ -1,6 +1,8 @@
 package pl.michal_boryczko.fiveseconds.ui.menu.impl
 
 import android.os.Bundle
+import butterknife.OnClick
+import kotlinx.android.synthetic.main.activity_menu.*
 import pl.michal_boryczko.fiveseconds.R
 import pl.michal_boryczko.fiveseconds.base.BaseActivity
 import pl.michal_boryczko.fiveseconds.ui.menu.MenuPresenter
@@ -17,6 +19,22 @@ class MenuActivity : BaseActivity(), MenuView {
 		setContentView(R.layout.activity_menu)
 		activityComponent.inject(this)
 		presenter.attachView(this)
+	}
+
+
+	@OnClick(R.id.buttonPlay)
+	fun buttonPlayClicked(){
 
 	}
+
+	@OnClick(R.id.buttonMyQuestions)
+	fun buttonMyQuestionsClicked(){
+
+	}
+
+	@OnClick(R.id.buttonPanel)
+	fun buttonRulesClicked(){
+
+	}
+
 }

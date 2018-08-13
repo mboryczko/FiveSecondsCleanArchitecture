@@ -6,11 +6,8 @@ import android.support.v4.app.Fragment
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import pl.michal_boryczko.fiveseconds.internal.AndroidApplication
+import pl.michal_boryczko.fiveseconds.AndroidApplication
 import pl.michal_boryczko.fiveseconds.internal.di.components.ApplicationComponent
-import pl.michal_boryczko.fiveseconds.internal.di.components.FragmentComponent
-import pl.michal_boryczko.fiveseconds.internal.di.modules.FragmentModule
-import javax.inject.Inject
 
 /**
  * Base [android.app.Activity] class for every Activity in this application.

@@ -7,12 +7,12 @@ sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
 configurations {
-    provided
+    compileOnly
 }
 
 sourceSets {
     main {
-        compileClasspath += configurations.provided
+        compileClasspath += configurations.compileOnly
     }
     main.java.srcDirs += 'src/main/kotlin'
 }

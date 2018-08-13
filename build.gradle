@@ -5,7 +5,7 @@ apply plugin: 'kotlin'
 
 
 buildscript {
-    ext.kotlin_version = '1.1.51'
+    ext.kotlin_version = '1.2.50'
 
     ext {
         rxJavaVersion = "2.1.6"
@@ -39,10 +39,12 @@ buildscript {
         okHttpVersion = '3.8.0'
         testRunner = '1.0.2'
         espresso = '3.0.2'
-        kotlinVersion = '1.1.51'
+        kotlinVersion = '1.2.50'
         jsonVersion = '20170516'
         stetho = '1.5.0'
         timber = '4.7.1'
+        nav_version = '1.0.0-alpha01'
+        roomVersion = '1.0.0-alpha4'
 
         presentationDependencies = [
                 appcompat                     : "com.android.support:appcompat-v7:${appcompatVersion}",
@@ -57,11 +59,13 @@ buildscript {
                 espresso                      : "com.android.support.test.espresso:espresso-core:${espresso}",
                 stetho                        : "com.facebook.stetho:stetho:${stetho}",
                 timber                        : "com.jakewharton.timber:timber:${timber}",
-                retrofit          : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
-                retrofitConverter : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
-                retrofitRxJava    : "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}",
-                retrofitLogging   : "com.squareup.okhttp3:logging-interceptor:${retrofitLoggingVersion}",
-                okHttp            : "com.squareup.okhttp3:okhttp:${okHttpVersion}",
+                retrofit                      : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+                retrofitConverter             : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+                retrofitRxJava                : "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}",
+                retrofitLogging               : "com.squareup.okhttp3:logging-interceptor:${retrofitLoggingVersion}",
+                okHttp                        : "com.squareup.okhttp3:okhttp:${okHttpVersion}",
+                navigationFragment            : "android.arch.navigation:navigation-fragment:$nav_version",
+                navigation                    : "android.arch.navigation:navigation-ui:$nav_version"
         ]
 
         dataDependencies = [
@@ -78,6 +82,9 @@ buildscript {
                 retrofitLogging   : "com.squareup.okhttp3:logging-interceptor:${retrofitLoggingVersion}",
                 javaxAnnotation   : "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
                 androidAnnotations: "com.android.support:support-annotations:${androidAnnotationsVersion}",
+                room              : "android.arch.persistence.room:runtime:${roomVersion}",
+                roomCompiler      : "android.arch.persistence.room:compiler:${roomVersion}",
+                roomTest          : "android.arch.persistence.room:testing:${roomVersion}",
 
         ]
 
@@ -98,7 +105,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.android.tools.build:gradle:3.3.0-alpha05'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // NOTE: Do not place your application dependencies here; they belong

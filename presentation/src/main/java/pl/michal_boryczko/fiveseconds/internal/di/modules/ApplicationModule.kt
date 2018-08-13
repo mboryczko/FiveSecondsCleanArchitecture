@@ -8,7 +8,7 @@ import pl.michal_boryczko.data.executor.JobExecutor
 import pl.michal_boryczko.domain.executor.PostExecutionThread
 import pl.michal_boryczko.domain.executor.ThreadExecutor
 import pl.michal_boryczko.fiveseconds.UiThread
-import pl.michal_boryczko.fiveseconds.internal.AndroidApplication
+import pl.michal_boryczko.fiveseconds.AndroidApplication
 import pl.michal_boryczko.fiveseconds.internal.DaggerNames
 import javax.inject.Named
 import javax.inject.Singleton

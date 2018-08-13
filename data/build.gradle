@@ -13,7 +13,17 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation":
+                                     "$projectDir/schemas".toString()]
+            }
+        }
 
+        sourceSets {
+            androidTest.assets.srcDirs +=
+                    files("$projectDir/schemas".toString())
+        }
     }
 
 
@@ -44,10 +54,13 @@ dependencies {
     implementation dataDependencies.retrofitLogging
 
     annotationProcessor  dataDependencies.daggerCompiler
-    provided dataDependencies.javaxAnnotation
+    compileOnly dataDependencies.javaxAnnotation
     implementation dataDependencies.dagger
-
     implementation dataDependencies.androidAnnotations
+
+    implementation dataDependencies.room
+    annotationProcessor dataDependencies.roomCompiler
+    androidTestImplementation  dataDependencies.roomTest
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'

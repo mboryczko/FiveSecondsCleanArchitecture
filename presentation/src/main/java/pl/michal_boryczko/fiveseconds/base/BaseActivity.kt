@@ -2,15 +2,13 @@ package pl.michal_boryczko.fiveseconds.base
 
 
 import android.content.Context
-import android.content.pm.ActivityInfo
-import android.support.multidex.MultiDexApplication
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import pl.michal_boryczko.domain.repository.Repository
-import pl.michal_boryczko.fiveseconds.R
-import pl.michal_boryczko.fiveseconds.internal.AndroidApplication
+import pl.michal_boryczko.domain.repository.LocalSource
+import pl.michal_boryczko.domain.repository.RemoteSource
+import pl.michal_boryczko.fiveseconds.AndroidApplication
 import pl.michal_boryczko.fiveseconds.internal.di.components.ActivityComponent
 import pl.michal_boryczko.fiveseconds.internal.di.components.ApplicationComponent
 import pl.michal_boryczko.fiveseconds.internal.di.components.DaggerActivityComponent
@@ -24,7 +22,14 @@ abstract class BaseActivity : AppCompatActivity() {
 
 
   @Inject
-  lateinit var repository: Repository
+  lateinit var remoteSource: RemoteSource
+
+
+  @Inject
+  lateinit var localSource: LocalSource
+
+
+
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)

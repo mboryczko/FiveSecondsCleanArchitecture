@@ -1,9 +1,8 @@
-package pl.michal_boryczko.fiveseconds.internal
+package pl.michal_boryczko.fiveseconds
 
 import android.app.Activity
 import android.support.multidex.MultiDexApplication
 import com.facebook.stetho.Stetho
-import pl.michal_boryczko.fiveseconds.BuildConfig
 import pl.michal_boryczko.fiveseconds.internal.di.components.ApplicationComponent
 import pl.michal_boryczko.fiveseconds.internal.di.components.DaggerApplicationComponent
 import pl.michal_boryczko.fiveseconds.internal.di.modules.ApplicationModule

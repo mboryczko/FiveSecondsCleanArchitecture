@@ -12,7 +12,7 @@ import pl.michal_boryczko.fiveseconds.BuildConfig
 import java.util.concurrent.TimeUnit
 import javax.inject.Named
 import javax.inject.Singleton
-import pl.michal_boryczko.fiveseconds.internal.AndroidApplication
+import pl.michal_boryczko.fiveseconds.AndroidApplication
 import pl.michal_boryczko.fiveseconds.internal.DaggerNames
 
 

@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="buttonStyle">@style/defaultButton</item>
     </style>
 
 
@@ -13,5 +14,12 @@
     <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@drawable/splash_background</item>
     </style>
+
+    <style name="defaultButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/white</item>
+        <item name="android:background">@drawable/default_button</item>
+    </style>
+
+
 
 </resources>
