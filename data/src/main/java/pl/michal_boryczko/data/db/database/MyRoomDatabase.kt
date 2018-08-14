@@ -4,7 +4,7 @@ import android.arch.persistence.room.Database
 import android.arch.persistence.room.Room
 import android.arch.persistence.room.RoomDatabase
 import android.content.Context
-import pl.michal_boryczko.data.interactor.QuestionDAO
+import pl.michal_boryczko.data.interactor.dao.QuestionDAO
 import pl.michal_boryczko.data.entity.QuestionRoom
 
 /**

@@ -12,9 +12,11 @@ interface ReactiveDatabase<T> {
 
 	fun update(item: T): Single<T>
 
+	fun addAll(items: Iterable<T>): Single<Iterable<T>>
+
 	/*fun add(item: T): Single<T>
 
-	fun addAll(items: Iterable<T>): Single<Iterable<T>>
+
 
 	fun remove(item: T): Completable
 

@@ -5,8 +5,13 @@ import io.reactivex.Single
 import pl.michal_boryczko.domain.models.Question
 
 /**
- * Created by ${michal_boryczko} on 13.08.2018.
+ * Created by ${michal_boryczko} on 10.08.2018.
  */
-interface LocalSource {
-	 fun insertAllQuestions(questions: List<Question>): Completable
+interface DataSource {
+
+	/*
+		gets questions from API and updates local db
+	 */
+	fun pullQuestions(): Completable
+
 }

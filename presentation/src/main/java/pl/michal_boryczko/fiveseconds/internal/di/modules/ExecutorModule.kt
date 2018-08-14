@@ -4,22 +4,22 @@ import dagger.Module
 import dagger.Provides
 import pl.michal_boryczko.domain.executor.PostExecutionThread
 import pl.michal_boryczko.domain.executor.ThreadExecutor
-import pl.michal_boryczko.domain.interactor.impl.UpdateQuestions
+import pl.michal_boryczko.domain.interactor.impl.PullQuestionsUseCase
+import pl.michal_boryczko.domain.repository.DataSource
 import pl.michal_boryczko.domain.repository.LocalSource
 import pl.michal_boryczko.domain.repository.RemoteSource
 import javax.inject.Singleton
 
 @Module
-class ExecutorModule constructor(
-		val remoteSource: RemoteSource,
-		val localSource: LocalSource,
-		val threadExecutor: ThreadExecutor,
-		val postExecutionThread: PostExecutionThread
-) {
+class ExecutorModule{
 
 	@Provides
 	@Singleton
-	internal fun provideGetQuestionsUseCase() = UpdateQuestions(remoteSource, localSource, threadExecutor, postExecutionThread)
+	internal fun providePullQuestionsUseCase(
+			dataSource: DataSource,
+			threadExecutor: ThreadExecutor,
+			postExecutionThread: PostExecutionThread
+	) = PullQuestionsUseCase(dataSource, threadExecutor, postExecutionThread)
 
 
 

@@ -13,7 +13,7 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-        javaCompileOptions {
+       /* javaCompileOptions {
             annotationProcessorOptions {
                 arguments = ["room.schemaLocation":
                                      "$projectDir/schemas".toString()]
@@ -23,7 +23,7 @@ android {
         sourceSets {
             androidTest.assets.srcDirs +=
                     files("$projectDir/schemas".toString())
-        }
+        }*/
     }
 
 
@@ -61,6 +61,7 @@ dependencies {
     implementation dataDependencies.room
     annotationProcessor dataDependencies.roomCompiler
     androidTestImplementation  dataDependencies.roomTest
+    androidTestImplementation  dataDependencies.roomRx
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'

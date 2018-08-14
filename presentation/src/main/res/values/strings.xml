@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">FiveSeconds</string>
+
+
+    <string name="unknown_error">Wystąpił nieoczekiwany błąd</string>
+
+
+
 </resources>

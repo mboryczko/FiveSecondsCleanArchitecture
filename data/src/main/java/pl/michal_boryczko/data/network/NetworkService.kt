@@ -1,6 +1,8 @@
 package pl.michal_boryczko.data.network
 
 import io.reactivex.Single
+import pl.michal_boryczko.data.entity.QuestionRoom
+import pl.michal_boryczko.domain.models.Question
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -10,11 +12,7 @@ import retrofit2.http.Query
  */
 interface NetworkService {
 
-	@GET("products/pln/list")
-	fun getProductList(
-			@Query("lang") lang: String = "pl",
-			@Query("currency") currency: String = "pln",
-			@Query("page") page: String = "",
-			@Query("limit") limit: String = ""
-	): Single<Response<Int>>
+	@GET("rxjava/getAllQuestions.php")
+	fun getAllQuestions(
+	): Single<Response<List<QuestionRoom>>>
 }

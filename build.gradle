@@ -85,6 +85,7 @@ buildscript {
                 room              : "android.arch.persistence.room:runtime:${roomVersion}",
                 roomCompiler      : "android.arch.persistence.room:compiler:${roomVersion}",
                 roomTest          : "android.arch.persistence.room:testing:${roomVersion}",
+                roomRx            : "android.arch.persistence.room:rxjava2:${roomVersion}",
 
         ]
 

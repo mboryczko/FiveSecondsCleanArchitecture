@@ -4,7 +4,8 @@ import QUESTION_TABLE
 import android.arch.persistence.room.Entity
 import android.arch.persistence.room.ColumnInfo
 import android.arch.persistence.room.PrimaryKey
-
+import pl.michal_boryczko.data.util.Transformer
+import pl.michal_boryczko.domain.models.Question
 
 
 /**
@@ -12,13 +13,15 @@ import android.arch.persistence.room.PrimaryKey
  */
 
 @Entity(tableName = QUESTION_TABLE)
-class QuestionRoom {
+data class QuestionRoom (
+		@PrimaryKey
+		@ColumnInfo(name = "id")
+		val id: Long = -1,
 
-	@PrimaryKey
-	@ColumnInfo(name = "userid")
-	private val id: Long = -1
+		@ColumnInfo(name = "name")
+		val name: String = ""
 
-	@ColumnInfo(name = "name")
-	private val name: String = ""
 
+):Transformer<Question>{
+	override fun transform(): Question = Question(id, name)
 }
